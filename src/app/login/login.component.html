@@ -1,0 +1,22 @@
+<div class="container login">
+    <form (submit)="onLogin($event, formCtrl)" #formCtrl="ngForm">
+        <md-card>
+            <md-card-title>Login</md-card-title>
+            <md-card-content>
+                <div>
+                    <md-input-container class="full-width">
+                        <input mdInput placeholder="Username" value="" required [minlength]="3" type="text" ngModel name="username" />
+                    </md-input-container>
+                </div>
+                <div>
+                    <md-input-container class="full-width">
+                        <input mdInput placeholder="Password" value="" required type="password" [minlength]="6" ngModel name="password" />
+                    </md-input-container>
+                </div>
+                <div class="login-btn">
+                    <button type="submit" [disabled]="!formCtrl.valid" md-raised-button color="primary">Login</button>
+                </div>
+            </md-card-content>
+        </md-card>
+    </form>
+</div>
