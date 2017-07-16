@@ -16,10 +16,10 @@ import 'rxjs/add/operator/map';
   templateUrl: 'home.component.html',
 })
 export class HomeComponent implements OnInit {
-  private options: string[] = ['One', 'Two', 'Three', 'Four', 'Five'];
-  private autocompleteCtrl = new FormControl();
-  private filteredOptions: Observable < string[] > ;
-  private enableTouchUI = false;
+  public options: string[] = ['One', 'Two', 'Three', 'Four', 'Five'];
+  public autocompleteCtrl = new FormControl();
+  public filteredOptions: Observable < string[] > ;
+  public enableTouchUI = false;
   constructor() {}
 
   ngOnInit(): void {
